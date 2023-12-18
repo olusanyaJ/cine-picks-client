@@ -11,6 +11,7 @@ function App() {
             <div className="App">
               <p>Welcome</p>
               <h1>CinePicks Landing Page!</h1>
+              <button className="App__btn">welcome</button>
             </div>
           }
         ></Route>

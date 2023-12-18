@@ -1,0 +1,37 @@
+@use "./variables" as *;
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin explore-button {
+  text-align: center;
+  padding: 0.5rem 3.3125rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: $button-color;
+  color: $button-text-color;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.1875rem;
+  letter-spacing: 0rem;
+}
+
+@mixin brand-header {
+  color: $primary-color;
+  text-align: center;
+  font-family: Sora;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
