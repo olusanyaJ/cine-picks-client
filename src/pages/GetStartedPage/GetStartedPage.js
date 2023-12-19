@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./GetStartedPage.scss";
-import imgHero from "../../assets/images/Horror1.png";
+import imgBanner from "../../assets/images/image1.png";
 import Header from "../../components/Header/Header";
 
 const GetStartedPage = () => {
@@ -8,7 +8,11 @@ const GetStartedPage = () => {
     <div className="main">
       <div className="get-started-page">
         <Header />
-        <h1>Get Started Page</h1>
+        <p>Get Started</p>
+        <Link to="/" className="get-started-page__link">
+          <span className="get-started-page__btn">Confirm details</span>
+        </Link>
+        <img src={imgBanner} alt="" className="get-started-page__img" />
       </div>
     </div>
   );
