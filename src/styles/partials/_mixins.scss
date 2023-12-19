@@ -36,3 +36,12 @@
   font-weight: 600;
   line-height: normal;
 }
+
+@mixin landing-page-pref-font {
+  font-family: Sora;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 0em;
+}

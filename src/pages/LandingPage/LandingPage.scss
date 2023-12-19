@@ -4,47 +4,52 @@
 
 .main {
   height: 100vh;
-  border: 1px solid red;
   padding: 0 1.5rem;
   background-image: url("../../assets/images/image2.png");
 }
 
 .landing-page {
-  border: 1px solid blue;
   padding: 0 1.25rem;
+  padding-top: 4.05625rem;
   &__title {
-    text-align: center;
+    @include brand-header;
+    font-size: 2rem;
+    margin-bottom: 4.5625rem;
   }
   &__inner {
-    border: 1px solid green;
     display: flex;
+    margin-bottom: 2rem;
   }
   &__list-left {
     width: 5.8125rem;
     margin-right: 1rem;
     text-align: right;
-    border: 1px solid brown;
+    color: $preferences-color;
+    @include landing-page-pref-font;
   }
   &__list-right {
     width: 12.25rem;
-    border: 1px solid orchid;
+    color: $primary-color;
+    @include landing-page-pref-font;
   }
   &__item {
     list-style: none;
   }
   &__subtitle {
     text-align: center;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
   }
   &__link {
     display: block;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 3.375rem;
   }
   &__btn {
     @include explore-button;
   }
   &__img {
-    width: 20.0625rem;
-    height: 15.625rem;
+    width: 100%;
   }
 }

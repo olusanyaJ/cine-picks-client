@@ -10,8 +10,8 @@ const LandingPage = () => {
         <div className="landing-page__inner">
           <ul className="landing-page__list-left">
             <li className="landing-page__item">Select</li>
-            <li className="landing-page__item">discover</li>
-            <li className="landing-page__item">enjoy</li>
+            <li className="landing-page__item">Discover</li>
+            <li className="landing-page__item">Enjoy</li>
           </ul>
           <ul className="landing-page__list-right">
             <li className="landing-page__item">your preferences</li>
@@ -20,7 +20,7 @@ const LandingPage = () => {
           </ul>
         </div>
         <p className="landing-page__subtitle">Ready to watch?</p>
-        <Link to="/home" className="landing-page__link">
+        <Link to="/get-started" className="landing-page__link">
           <button className="landing-page__btn">Start exploring</button>
         </Link>
         <img src={imgHero} alt="" className="landing-page__img" />
