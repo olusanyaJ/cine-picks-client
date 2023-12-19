@@ -1,0 +1,52 @@
+@use "../../styles/partials/reset";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.main {
+  height: 100vh;
+  border: 1px solid red;
+  padding: 0 1.5rem;
+  // background-image: url("../../assets/images/image2.png");
+}
+
+.landing-page {
+  border: 1px solid blue;
+  padding: 0 1.25rem;
+  &__title {
+    text-align: center;
+  }
+  &__subtitle {
+    text-align: center;
+  }
+  &__btn {
+    @include explore-button;
+  }
+}
+
+.link {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.text {
+  @include explore-button;
+}
+
+.box {
+  border: 1px solid green;
+  display: flex;
+}
+.box1 {
+  width: 5.8125rem;
+  margin-right: 1rem;
+  text-align: right;
+  border: 1px solid brown;
+}
+.box2 {
+  width: 12.25rem;
+  border: 1px solid orchid;
+}
+.list {
+  list-style: none;
+}
