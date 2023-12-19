@@ -1,6 +1,6 @@
 import "./Input.scss";
 
-const Input = ({ label, name, type }) => {
+const Input = ({ label, name, type, value }) => {
   return (
     <section className="field">
       <label htmlFor={name} className="field__label">
