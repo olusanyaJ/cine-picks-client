@@ -1,27 +1,29 @@
 import { Link } from "react-router-dom";
 import "./LandingPage.scss";
+import imgHero from "../../assets/images/Horror1.png";
 
 const LandingPage = () => {
   return (
     <div className="main">
       <div className="landing-page">
         <h1 className="landing-page__title">CinePicks</h1>
-        <div className="box">
-          <ul className="box1">
-            <li className="list">Select</li>
-            <li className="list">discover</li>
-            <li className="list">enjoy</li>
+        <div className="landing-page__inner">
+          <ul className="landing-page__list-left">
+            <li className="landing-page__item">Select</li>
+            <li className="landing-page__item">discover</li>
+            <li className="landing-page__item">enjoy</li>
           </ul>
-          <ul className="box2">
-            <li className="list">your preferences</li>
-            <li className="list">new entertainment</li>
-            <li className="list">the show</li>
+          <ul className="landing-page__list-right">
+            <li className="landing-page__item">your preferences</li>
+            <li className="landing-page__item">new entertainment</li>
+            <li className="landing-page__item">the show</li>
           </ul>
         </div>
         <p className="landing-page__subtitle">Ready to watch?</p>
-        <Link to="/home" className="link">
-          <button className="text">Start exploring</button>
+        <Link to="/home" className="landing-page__link">
+          <button className="landing-page__btn">Start exploring</button>
         </Link>
+        <img src={imgHero} alt="" className="landing-page__img" />
       </div>
     </div>
   );
