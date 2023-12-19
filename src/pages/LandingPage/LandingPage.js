@@ -21,7 +21,7 @@ const LandingPage = () => {
         </div>
         <p className="landing-page__subtitle">Ready to watch?</p>
         <Link to="/get-started" className="landing-page__link">
-          <button className="landing-page__btn">Start exploring</button>
+          <span className="landing-page__btn">Start exploring</span>
         </Link>
         <img src={imgHero} alt="" className="landing-page__img" />
       </div>
