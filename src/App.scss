@@ -2,9 +2,6 @@
 @use "../src/styles/partials/mixins" as *;
 @use "../src/styles/partials/variables" as *;
 
-.App {
-  text-align: center;
-  &__btn {
-    @include explore-button;
-  }
+body {
+  font-family: SF Pro Display;
 }

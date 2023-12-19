@@ -1,20 +1,12 @@
 import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LandingPage from "./pages/LandingPage/LandingPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="App">
-              <p>Welcome</p>
-              <h1>CinePicks Landing Page!</h1>
-              <button className="App__btn">welcome</button>
-            </div>
-          }
-        ></Route>
+        <Route path="/" element={<LandingPage />}></Route>
       </Routes>
     </BrowserRouter>
   );
