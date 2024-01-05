@@ -1,0 +1,41 @@
+@use "../../styles/partials/reset";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.get-started-page {
+  &__title {
+    margin-bottom: 1.3125rem;
+    color: $primary-color;
+    line-height: 2rem;
+  }
+  &_subtitle {
+    margin-bottom: 1.3125rem;
+    color: $primary-color;
+    line-height: 2rem;
+  }
+  &__link {
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+    text-decoration-line: none;
+  }
+  &__btn {
+    @include explore-button;
+    padding: 0.5rem 3.3125rem;
+  }
+}
+
+.get-started {
+  margin-bottom: 3.6875rem;
+}
+.get-start {
+  margin-bottom: 2.75rem;
+}
+
+.img1 {
+  width: 100%;
+  border-radius: 1rem;
+}
+.img1:hover {
+  cursor: pointer;
+}
