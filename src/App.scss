@@ -2,6 +2,8 @@
 @use "../src/styles/partials/mixins" as *;
 @use "../src/styles/partials/variables" as *;
 
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+
 body {
   font-family: SF Pro Display;
 }

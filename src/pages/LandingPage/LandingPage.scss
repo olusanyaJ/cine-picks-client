@@ -9,11 +9,13 @@
 }
 
 .landing-page {
+  height: 100vh;
   padding: 0 1.25rem;
-  padding-top: 4.05625rem;
+  padding-top: 8.9375rem;
   &__title {
     @include brand-header;
     font-size: 2rem;
+    line-height: 2.52rem;
     margin-bottom: 4.5625rem;
   }
   &__inner {
@@ -34,21 +36,24 @@
   }
   &__item {
     list-style: none;
+    font-weight: 800;
   }
   &__subtitle {
     text-align: center;
+    font-weight: 400;
     line-height: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    color: $primary-color;
   }
   &__link {
+    @include explore-button;
     display: block;
     margin: 0 auto;
+    width: 13.125rem;
     text-align: center;
+    padding: 0.9063rem 2.6875rem;
     margin-bottom: 3.375rem;
     text-decoration-line: none;
-  }
-  &__btn {
-    @include explore-button;
   }
   &__img {
     width: 100%;
