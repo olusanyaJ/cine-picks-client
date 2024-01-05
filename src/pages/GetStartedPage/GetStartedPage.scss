@@ -3,6 +3,14 @@
 @use "../../styles/partials/variables" as *;
 
 .get-started-page {
+  &__left-wrapper {
+    border: 1px solid red;
+    margin-bottom: 3.6875rem;
+  }
+  &__right-wrapper {
+    border: 1px solid blue;
+    margin-bottom: 2.75rem;
+  }
   &__title {
     margin-bottom: 1.3125rem;
     color: $primary-color;
@@ -12,6 +20,14 @@
     margin-bottom: 1.3125rem;
     color: $primary-color;
     line-height: 2rem;
+  }
+  &__avatar {
+    // width: 100%;
+    border-radius: 1rem;
+  }
+  &__avatar:hover {
+    cursor: pointer;
+    border: 1px solid blue;
   }
   &__link {
     display: block;
@@ -25,17 +41,7 @@
   }
 }
 
-.get-started {
-  margin-bottom: 3.6875rem;
-}
-.get-start {
-  margin-bottom: 2.75rem;
-}
-
-.img1 {
+.img-contaienr {
   width: 100%;
-  border-radius: 1rem;
-}
-.img1:hover {
-  cursor: pointer;
+  border: 1px solid red;
 }

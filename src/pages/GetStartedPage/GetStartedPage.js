@@ -15,20 +15,24 @@ const GetStartedPage = () => {
     <div className="main">
       <Header />
       <div className="get-started-page">
-        <div className="get-started">
+        <div className="get-started-page__left-wrapper">
           <p className="get-started-page__title">Get Started</p>
           <Input type="text" name="username" label="Username" />
-          <InputSelect name="pets" label="Choose a Language" />
+          <InputSelect name="language-select" label="Choose a Language" />
         </div>
-        <div className="get-start">
+        <div className="get-started-page__right-wrapper">
           <p className="get-started-page__subtitle">Choose Avatar</p>
           <div className="img-contaienr">
-            <img src={avatarOne} alt="" className="img1" />
-            <img src={avatarTwo} alt="" className="img1" />
-            <img src={avatarThree} alt="" className="img1" />
-            <img src={avatarFour} alt="" className="img1" />
-            <img src={avatarFive} alt="" className="img1" />
-            <img src={avatarSix} alt="" className="img1" />
+            <img src={avatarOne} alt="" className="get-started-page__avatar" />
+            <img src={avatarTwo} alt="" className="get-started-page__avatar" />
+            <img
+              src={avatarThree}
+              alt=""
+              className="get-started-page__avatar"
+            />
+            <img src={avatarFour} alt="" className="get-started-page__avatar" />
+            <img src={avatarFive} alt="" className="get-started-page__avatar" />
+            <img src={avatarSix} alt="" className="get-started-page__avatar" />
           </div>
         </div>
         <Link to="/" className="get-started-page__link">
