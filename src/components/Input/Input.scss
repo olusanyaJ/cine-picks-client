@@ -21,6 +21,12 @@
     &::placeholder {
       color: $form-text-color;
     }
+    &.error {
+      border: 2.5px solid $button-color;
+      &::placeholder {
+        color: $button-color;
+      }
+    }
   }
   &__select {
     margin-bottom: 0.5rem;
@@ -31,5 +37,9 @@
     font-size: inherit;
     height: 2.25rem;
     color: $form-text-color;
+    &.error {
+      border: 2.5px solid $button-color;
+      color: $button-color;
+    }
   }
 }

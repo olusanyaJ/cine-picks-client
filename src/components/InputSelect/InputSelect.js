@@ -1,16 +1,18 @@
 import "./InputSelect.scss";
 
-const InputSelect = ({ name, value, onChange }) => {
+const InputSelect = ({ name, value, onChange, isError, label }) => {
+  const inputClassName = `field__select ${isError ? "error" : ""}`;
+
   return (
     <section className="field">
       <select
         name={name}
         id={name}
-        className="field__select"
+        className={inputClassName}
         value={value}
         onChange={onChange}
       >
-        <option value="">Choose a Language</option>
+        <option label={label}></option>
         <option value="english">English</option>
         <option value="french">French</option>
         <option value="spanish">Spanish</option>

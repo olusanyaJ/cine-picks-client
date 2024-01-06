@@ -1,13 +1,15 @@
 import "./Input.scss";
 
-const Input = ({ name, type, value, placeholder, onChange }) => {
+const Input = ({ name, type, value, placeholder, onChange, isError }) => {
+  const inputClassName = `field__input ${isError ? "error" : ""}`;
+
   return (
     <section className="field">
       <input
         type={type}
         id={name}
         name={name}
-        className="field__input"
+        className={inputClassName}
         placeholder={placeholder}
         value={value}
         onChange={onChange}

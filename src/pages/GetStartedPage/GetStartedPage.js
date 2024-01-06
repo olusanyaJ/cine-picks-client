@@ -19,17 +19,25 @@ const GetStartedPage = () => {
   const [languageSelected, setLanguageSelected] = useState("");
   const [avatarSelected, setAvatarSelected] = useState(null);
 
+  const [usernameError, setUsernameError] = useState(false);
+  const [langaugeSelectError, setLangaugeSelectError] = useState(false);
+  const [avatarSelectError, setAvatarSelectError] = useState(false);
+
   const navigate = useNavigate();
+
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
+    setUsernameError(false);
   };
 
   const handleLanguageChange = (event) => {
     setLanguageSelected(event.target.value);
+    setLangaugeSelectError(false);
   };
 
   const handleAvatarSelect = (avatar) => () => {
     setAvatarSelected(avatar);
+    setAvatarSelectError(false);
   };
 
   const isAvatarSelected = (avatar) => {
@@ -39,12 +47,15 @@ const GetStartedPage = () => {
   const handleClick = (event) => {
     event.preventDefault();
     if (!username) {
+      setUsernameError(true);
       return console.log("Enter a username");
     }
     if (!languageSelected) {
+      setLangaugeSelectError(true);
       return console.log("Select a language");
     }
     if (!avatarSelected) {
+      setAvatarSelectError(true);
       return console.log("Select an avatar");
     }
     console.log("Username:", username);
@@ -63,19 +74,31 @@ const GetStartedPage = () => {
             type="text"
             name="username"
             label="Username"
-            placeholder="Account Username"
+            placeholder={
+              usernameError ? "Enter a Username" : "Account Username"
+            }
             value={username}
             onChange={handleUsernameChange}
+            isError={usernameError}
           />
           <InputSelect
             name="Language"
-            label="Choose a Language"
+            label={
+              langaugeSelectError ? "Select a Language" : "Choose a Language"
+            }
             value={languageSelected}
             onChange={handleLanguageChange}
+            isError={langaugeSelectError}
           />
         </div>
         <div className="get-started-page__inner">
-          <p className="get-started-page__subtitle">Choose your avatar</p>
+          <p
+            className={`get-started-page__subtitle ${
+              avatarSelectError ? "error" : ""
+            }`}
+          >
+            Choose your avatar
+          </p>
           <div className="get-started-page__avatar-container">
             {[
               avatarOne,
