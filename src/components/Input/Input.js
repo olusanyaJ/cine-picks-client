@@ -1,12 +1,17 @@
 import "./Input.scss";
 
-const Input = ({ label, name, type, value }) => {
+const Input = ({ name, type, value, placeholder, onChange }) => {
   return (
     <section className="field">
-      <label htmlFor={name} className="field__label">
-        {label}
-      </label>
-      <input type={type} id={name} name={name} className="field__input" />
+      <input
+        type={type}
+        id={name}
+        name={name}
+        className="field__input"
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
     </section>
   );
 };

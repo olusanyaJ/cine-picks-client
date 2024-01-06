@@ -3,39 +3,58 @@
 @use "../../styles/partials/variables" as *;
 
 .get-started-page {
+  // border: 1px solid red;
+  height: 91.75vh;
+  &__wrapper {
+    margin-bottom: 3.6875rem;
+  }
+  &__inner {
+    margin-bottom: 2.75rem;
+  }
   &__title {
     margin-bottom: 1.3125rem;
     color: $primary-color;
     line-height: 2rem;
   }
-  &_subtitle {
-    margin-bottom: 1.3125rem;
+  &__subtitle {
     color: $primary-color;
     line-height: 2rem;
+  }
+  &__avatar-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__avatar {
+    width: 6.3125rem;
+    height: 6.3125rem;
+    border-radius: 50%;
+    margin: 0.8438rem 0;
+    cursor: pointer;
+    filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0%);
+      border: 1px solid $preferences-color;
+    }
+    &.selected {
+      filter: grayscale(0%);
+      border: 5px solid $button-color;
+    }
   }
   &__link {
     display: block;
     margin: 1rem auto;
     text-align: center;
     text-decoration-line: none;
+    border: 1px solid blue;
+    padding: 0.5rem 3.3125rem;
+    width: 15.6875rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: $button-color;
+    color: $button-text-color;
   }
   &__btn {
     @include explore-button;
-    padding: 0.5rem 3.3125rem;
   }
-}
-
-.get-started {
-  margin-bottom: 3.6875rem;
-}
-.get-start {
-  margin-bottom: 2.75rem;
-}
-
-.img1 {
-  width: 100%;
-  border-radius: 1rem;
-}
-.img1:hover {
-  cursor: pointer;
 }
