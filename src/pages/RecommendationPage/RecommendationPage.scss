@@ -1,0 +1,7 @@
+@use "../../styles/partials/reset";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.recommendation-page {
+  border: 1px solid red;
+}
