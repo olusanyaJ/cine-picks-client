@@ -1,7 +1,61 @@
 @use "../../styles/partials/reset";
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Sora&display=swap");
 
 .recommendation-page {
-  border: 1px solid red;
+  //   border: 1px solid red;
+  &__banner {
+    height: 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.4375rem;
+  }
+  &__desc {
+    font-weight: 400;
+    line-height: 2rem;
+  }
+  &__edit-btn {
+    background-color: $preferences-options-color;
+    padding: 0.5rem 1rem;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 1.21rem;
+    color: $primary-color;
+    border-radius: 1rem;
+    text-decoration-line: none;
+  }
+}
+
+.user {
+  &__avatar {
+    width: 4.125rem;
+    height: 4.125rem;
+    margin-bottom: 0.25rem;
+  }
+  &__username {
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    color: $primary-color;
+    margin-bottom: 2.125rem;
+  }
+}
+
+.container {
+  //   border: 1px solid blue;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 4rem;
+  height: 4rem;
+  background-color: grey;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
