@@ -64,6 +64,10 @@ const GetStartedPage = () => {
     navigate("/");
   };
 
+  const gotoRec = () => {
+    navigate("/recommendations");
+  };
+
   return (
     <div className="main">
       <Header />
@@ -123,9 +127,15 @@ const GetStartedPage = () => {
             ))}
           </div>
         </div>
-        <Link to="" className="get-started-page__link" onClick={handleClick}>
+        <Link
+          to="/preferences"
+          className="get-started-page__link"
+          onClick={handleClick}
+        >
           Confirm details
         </Link>
+
+        <button onClick={gotoRec}>Recommendations Page</button>
       </div>
     </div>
   );

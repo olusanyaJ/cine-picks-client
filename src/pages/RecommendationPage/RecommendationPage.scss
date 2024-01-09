@@ -1,0 +1,45 @@
+@use "../../styles/partials/reset";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Sora&display=swap");
+
+.recommendation-page {
+  &__banner {
+    padding: 0 1.5rem;
+    height: 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.4375rem;
+  }
+  &__desc {
+    font-weight: 400;
+    line-height: 2rem;
+  }
+  &__edit-btn {
+    background-color: $preferences-options-color;
+    padding: 0.5rem 1rem;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 1.21rem;
+    color: $primary-color;
+    border-radius: 1rem;
+    text-decoration-line: none;
+  }
+}
+
+.user {
+  padding: 0 1.5rem;
+  &__avatar {
+    width: 4.125rem;
+    height: 4.125rem;
+    margin-bottom: 0.25rem;
+  }
+  &__username {
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    color: $primary-color;
+    margin-bottom: 2.125rem;
+  }
+}
