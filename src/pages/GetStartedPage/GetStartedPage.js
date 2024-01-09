@@ -58,10 +58,8 @@ const GetStartedPage = () => {
       setAvatarSelectError(true);
       return console.log("Select an avatar");
     }
-    console.log("Username:", username);
-    console.log("Language Selected:", languageSelected);
-    console.log("Avatar Selected:", avatarSelected);
-    navigate("/");
+    alert("Hola!!");
+    navigate("/recommendations");
   };
 
   const gotoRec = () => {
@@ -127,11 +125,7 @@ const GetStartedPage = () => {
             ))}
           </div>
         </div>
-        <Link
-          to="/preferences"
-          className="get-started-page__link"
-          onClick={handleClick}
-        >
+        <Link className="get-started-page__link" onClick={handleClick}>
           Confirm details
         </Link>
 

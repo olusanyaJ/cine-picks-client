@@ -1,7 +1,12 @@
+@use "../../styles/partials/reset";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
 .recommendation {
   margin-bottom: 0.75rem;
   &__genre {
     margin-bottom: 0.75rem;
+    color: $primary-color;
   }
   &__img {
     width: 5.5rem;
