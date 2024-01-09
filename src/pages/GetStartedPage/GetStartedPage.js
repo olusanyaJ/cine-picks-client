@@ -127,7 +127,11 @@ const GetStartedPage = () => {
             ))}
           </div>
         </div>
-        <Link to="" className="get-started-page__link" onClick={handleClick}>
+        <Link
+          to="/preferences"
+          className="get-started-page__link"
+          onClick={handleClick}
+        >
           Confirm details
         </Link>
 

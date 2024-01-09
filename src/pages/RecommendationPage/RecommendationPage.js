@@ -13,10 +13,6 @@ import { Link } from "react-router-dom";
 const RecommendationPage = () => {
   const movieImagesArray = [imgg, img1, img2, img3, imgg, img1, img2, img3];
 
-  const handleClick = () => {
-    console.log("working");
-  };
-
   return (
     <div className="main">
       <Header />
@@ -31,11 +27,7 @@ const RecommendationPage = () => {
         </div>
         <div className="recommendation-page__banner">
           <p className="recommendation-page__desc">Here are some suggestions</p>
-          <Link
-            to=""
-            className="recommendation-page__edit-btn"
-            onClick={handleClick}
-          >
+          <Link to="/preferences" className="recommendation-page__edit-btn">
             Edit
           </Link>
         </div>
@@ -53,11 +45,13 @@ const RecommendationPage = () => {
             >
               {movieImagesArray.map((image, index) => (
                 <SwiperSlide key={index}>
-                  <img
-                    src={image}
-                    alt={`movie img-card ${index}`}
-                    className="recommendation__img"
-                  />
+                  <Link to="/film-details" className="">
+                    <img
+                      src={image}
+                      alt={`movie img-card ${index}`}
+                      className="recommendation__img"
+                    />
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>
