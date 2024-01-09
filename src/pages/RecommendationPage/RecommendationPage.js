@@ -1,6 +1,7 @@
 import Header from "../../components/Header/Header";
 import "./RecommendationPage.scss";
 import avatarOne from "../../assets/avatars/Ellipse1.png";
+import imgg from "../../assets/card-shows.png";
 import { Link } from "react-router-dom";
 
 const RecommendationPage = () => {
@@ -29,15 +30,37 @@ const RecommendationPage = () => {
             Edit
           </Link>
         </div>
-        <div className="container">
-          <p>Action-Thriller</p>
-          <div className="slider">
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
+
+        <div className="recommendations">
+          <div className="recommendation">
+            <p className="recommendation__genre">Action-Thriller</p>
+            <div className="recommendation__slider">
+              <img
+                src={imgg}
+                alt="movie img-card"
+                className="recommendation__img"
+              />
+              <img
+                src={imgg}
+                alt="movie img-card"
+                className="recommendation__img"
+              />
+              <img
+                src={imgg}
+                alt="movie img-card"
+                className="recommendation__img"
+              />
+              <img
+                src={imgg}
+                alt="movie img-card"
+                className="recommendation__img"
+              />
+              <img
+                src={imgg}
+                alt="movie img-card"
+                className="recommendation__img"
+              />
+            </div>
           </div>
         </div>
       </div>

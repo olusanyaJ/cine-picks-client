@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Sora&display=swap");
 
 .recommendation-page {
-  //   border: 1px solid red;
+  border: 1px solid red;
   &__banner {
     height: 2rem;
     align-items: center;
@@ -43,19 +43,21 @@
   }
 }
 
-.container {
-  //   border: 1px solid blue;
+.recommendations {
+  border: 1px solid blue;
 }
 
-.slider {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.box {
-  width: 4rem;
-  height: 4rem;
-  background-color: grey;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+.recommendation {
+  &__genre {
+    margin-bottom: 0.75rem;
+  }
+  &__slider {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__img {
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-right: 1rem;
+  }
 }
