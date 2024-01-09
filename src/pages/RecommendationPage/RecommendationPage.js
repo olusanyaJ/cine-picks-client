@@ -1,18 +1,10 @@
-import "swiper/css";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Header from "../../components/Header/Header";
 import "./RecommendationPage.scss";
 import avatarOne from "../../assets/avatars/Ellipse1.png";
-import imgg from "../../assets/card-shows.png";
-import img1 from "../../assets/card-shows copy.png";
-import img2 from "../../assets/card-shows (1).png";
-import img3 from "../../assets/card-shows (2).png";
-
 import { Link } from "react-router-dom";
+import Recommendations from "../../components/Recommendations/Recommendations";
 
 const RecommendationPage = () => {
-  const movieImagesArray = [imgg, img1, img2, img3, imgg, img1, img2, img3];
-
   return (
     <div className="main">
       <Header />
@@ -32,31 +24,7 @@ const RecommendationPage = () => {
           </Link>
         </div>
 
-        <div className="recommendations">
-          <div className="recommendation">
-            <p className="recommendation__genre">Action-Thriller</p>
-            <Swiper
-              spaceBetween={16}
-              slidesPerView={3.49}
-              // onSlideChange={() => console.log("slide change")}
-              // onSwiper={(swiper) => console.log(swiper)}
-              // loop
-              autoplay={{ delay: 2000 }}
-            >
-              {movieImagesArray.map((image, index) => (
-                <SwiperSlide key={index}>
-                  <Link to="/film-details" className="">
-                    <img
-                      src={image}
-                      alt={`movie img-card ${index}`}
-                      className="recommendation__img"
-                    />
-                  </Link>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
+        <Recommendations />
       </div>
     </div>
   );
