@@ -21,23 +21,27 @@
   }
   &__inner {
     display: flex;
+    justify-content: center;
+    padding: 0 0.5rem;
     margin-bottom: 2rem;
   }
   &__list-left {
-    width: 5.8125rem;
     margin-right: 1rem;
     text-align: right;
     color: $preferences-color;
     @include landing-page-pref-font;
   }
   &__list-right {
-    width: 12.25rem;
     color: $primary-color;
     @include landing-page-pref-font;
   }
   &__item {
     list-style: none;
     font-weight: 800;
+    @include mobile-max {
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
   }
   &__subtitle {
     text-align: center;
@@ -45,6 +49,10 @@
     line-height: 2rem;
     margin-bottom: 0.5rem;
     color: $primary-color;
+    @include mobile-max {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
   }
   &__link {
     @include explore-button;
@@ -55,6 +63,9 @@
     padding: 0.9063rem 2.6875rem;
     margin-bottom: 3.375rem;
     text-decoration-line: none;
+    @include mobile-max {
+      font-size: 1.125rem;
+    }
   }
   &__img {
     width: 100%;
