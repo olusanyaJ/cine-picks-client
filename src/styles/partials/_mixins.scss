@@ -1,6 +1,12 @@
 @use "./variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
 
+@mixin mobile-max {
+  @media screen and (min-width: $mobile-max-breakpoint) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
     @content;

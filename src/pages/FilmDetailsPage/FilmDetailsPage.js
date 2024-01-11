@@ -12,7 +12,7 @@ const FilmDetailsPage = () => {
       <div className="details">
         <div className="details__banner">
           <Link to="/recommendations" className="details__icon">
-            <img src={backIcon} alt="backIcon" />
+            <img src={backIcon} alt="backIcon" className="details__icon-img" />
           </Link>
           <p className="details__title">Shadow Protocol</p>
         </div>
