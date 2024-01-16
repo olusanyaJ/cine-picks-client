@@ -4,6 +4,9 @@
 
 .header {
   padding: 1.1875rem 0;
+  &__link {
+    text-decoration-line: none;
+  }
   &__title {
     @include brand-header;
   }
