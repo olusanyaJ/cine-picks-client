@@ -13,14 +13,7 @@ const RecommendationSlider = () => {
 
   return (
     <>
-      <Swiper
-        spaceBetween={16}
-        slidesPerView={3.49}
-        // onSlideChange={() => console.log("slide change")}
-        // onSwiper={(swiper) => console.log(swiper)}
-        // loop
-        autoplay={{ delay: 2000 }}
-      >
+      <Swiper spaceBetween={16} slidesPerView={3.49} autoplay={{ delay: 2000 }}>
         {movieImagesArray.map((image, index) => (
           <SwiperSlide key={index}>
             <Link to="/film-details" className="">
