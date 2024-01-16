@@ -7,18 +7,19 @@
   &__genre {
     margin-bottom: 0.75rem;
     color: $primary-color;
+    @include mobile-max {
+      font-size: 1.25rem;
+    }
   }
   &__img {
     width: 5.5rem;
     height: 5.5rem;
     margin-right: 1rem;
     border-radius: 1.0462rem;
+    @include mobile-max {
+      font-size: 1.25rem;
+      width: 6.125rem;
+      height: 6.125rem;
+    }
   }
-}
-
-.swiper-slide,
-.swiper-slide-active,
-.swiper-slide-next {
-  width: 5.5rem;
-  height: 5.5rem;
 }
