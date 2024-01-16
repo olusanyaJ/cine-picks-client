@@ -14,6 +14,9 @@
     margin-bottom: 1.3125rem;
     color: $primary-color;
     line-height: 2rem;
+    @include mobile-max {
+      font-size: 1.25rem;
+    }
   }
   &__subtitle {
     color: $primary-color;
@@ -22,18 +25,24 @@
       color: $button-color;
       font-size: 1.5rem;
       font-weight: 900;
+      @include mobile-max {
+        font-size: 1.25rem;
+      }
+    }
+    @include mobile-max {
+      font-size: 1.25rem;
     }
   }
   &__avatar-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   &__avatar {
     width: 6.3125rem;
     height: 6.3125rem;
     border-radius: 50%;
-    margin: 0.8438rem 0;
+    margin: 0.75rem 0.25rem;
     cursor: pointer;
     filter: grayscale(100%);
     &:hover {
@@ -43,6 +52,10 @@
     &.selected {
       filter: grayscale(0%);
       border: 5px solid $button-color;
+    }
+    @include mobile-max {
+      width: 7.2rem;
+      height: 7.2rem;
     }
   }
   &__link {
@@ -57,5 +70,9 @@
     border: none;
     background: $button-color;
     color: $button-text-color;
+    @include mobile-max {
+      font-size: 1.25rem;
+      padding: 0.675rem 3.5rem;
+    }
   }
 }
