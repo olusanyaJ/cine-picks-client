@@ -2,31 +2,62 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.loading {
-  border: 2px solid red;
+.loading-comp {
   text-align: center;
   padding: 0 1.5rem;
-  //   padding-top: 10rem;
-  //   position: fixed;
-  //   bottom: 0;
-}
+  padding-top: 5rem;
+  left: 0;
+  right: 0;
+  position: fixed;
+  bottom: 0;
+  &__desc {
+    width: 14.25rem;
+    margin: 0 auto;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    margin-bottom: 1.5rem;
+    @include mobile-max {
+      font-size: 1.25rem;
+      width: 17.5rem;
+    }
+  }
+  &__loader {
+    height: 0.5rem;
+    width: 100%;
+    position: relative; /* Needed for absolute positioning of pseudo-element */
+    background: $loading-bar-color;
+    margin-bottom: 7.8125rem;
+    overflow: hidden; /* Ensures the pseudo-element does not spill out of the loader */
+  }
 
-.loader {
-  height: 4px;
-  width: 100%;
-  --c: no-repeat linear-gradient(#6100ee 0 0);
-  background: var(--c), var(--c), #d7b8fc;
-  background-size: 60% 100%;
-  animation: l16 3s infinite;
-}
-@keyframes l16 {
-  0% {
-    background-position: -150% 0, -150% 0;
+  &__loader::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 25%;
+    background: no-repeat linear-gradient($preferences-color 0 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: growLoader 3s forwards;
   }
-  66% {
-    background-position: 250% 0, -150% 0;
+
+  @keyframes growLoader {
+    0% {
+      width: 25%;
+    }
+    100% {
+      width: 100%;
+    }
   }
-  100% {
-    background-position: 250% 0, 250% 0;
+  &__img {
+    height: 15.1875rem;
+    width: 16rem;
+    margin-bottom: 5.25rem;
+    @include mobile-max {
+      width: 90%;
+      height: 90%;
+    }
   }
 }

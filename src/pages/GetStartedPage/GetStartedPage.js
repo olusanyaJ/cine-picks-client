@@ -48,22 +48,21 @@ const GetStartedPage = () => {
     event.preventDefault();
     if (!username) {
       setUsernameError(true);
-      return console.log("Enter a username");
+      return;
     }
     if (!languageSelected) {
       setLangaugeSelectError(true);
-      return console.log("Select a language");
+      return;
     }
     if (!avatarSelected) {
       setAvatarSelectError(true);
-      return console.log("Select an avatar");
+      return;
     }
-    alert("Hola!!");
-    navigate("/recommendations");
-  };
-
-  const gotoRec = () => {
-    navigate("/recommendations");
+    console.log("username: ", username);
+    console.log("languageSelected: ", languageSelected);
+    console.log("avatarSelected: ", avatarSelected);
+    alert("Redirecting you to select preferences!");
+    navigate("/preferences");
   };
 
   return (
@@ -128,8 +127,6 @@ const GetStartedPage = () => {
         <Link className="get-started-page__link" onClick={handleClick}>
           Confirm details
         </Link>
-
-        <button onClick={gotoRec}>Recommendations Page</button>
       </div>
     </div>
   );

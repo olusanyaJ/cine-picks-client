@@ -1,7 +1,8 @@
 import "./PreferencesPage.scss";
 import Header from "../../components/Header/Header";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
+import LoadingComp from "../../components/Loading/LoadingComp";
 
 const PreferencesPage = () => {
   const [genreSelected, setGenreSelected] = useState([]);
@@ -10,8 +11,6 @@ const PreferencesPage = () => {
 
   const [movieTypeSelected, setMovieTypeSelected] = useState([]);
   const [preferencesSelectError, setPreferencesSelectError] = useState(false);
-
-  const navigate = useNavigate();
 
   const genreList = [
     "Action",
@@ -58,7 +57,6 @@ const PreferencesPage = () => {
       ? genreSelected.filter((selectedGenre) => selectedGenre !== genre)
       : [...genreSelected, genre];
     setGenreSelected(updatedGenres);
-    console.log("The genre selected:", updatedGenres);
     setPreferencesSelectError(false);
   };
 
@@ -68,7 +66,6 @@ const PreferencesPage = () => {
       ? regionSelected.filter((selectedRegion) => selectedRegion !== region)
       : [...regionSelected, region];
     setRegionSelected(updatedRegions);
-    console.log("The region selected:", updatedRegions);
     setPreferencesSelectError(false);
   };
 
@@ -80,7 +77,6 @@ const PreferencesPage = () => {
         )
       : [...durationSelected, duration];
     setDurationSelected(updatedDurations);
-    console.log("The duration selected:", updatedDurations);
     setPreferencesSelectError(false);
   };
 
@@ -91,7 +87,6 @@ const PreferencesPage = () => {
           (selectedRegion) => selectedRegion !== movieType
         )
       : [...movieTypeSelected, movieType];
-    console.log("The movie types selected:", updatedmovieTypes);
     setMovieTypeSelected(updatedmovieTypes);
     setPreferencesSelectError(false);
   };
@@ -112,27 +107,30 @@ const PreferencesPage = () => {
     return movieTypeSelected.includes(movieType);
   };
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleClick = (event) => {
     event.preventDefault();
-    if (genreSelected.length === 0) {
+
+    if (
+      genreSelected.length === 0 ||
+      regionSelected.length === 0 ||
+      durationSelected.length === 0 ||
+      movieTypeSelected.length === 0
+    ) {
       setPreferencesSelectError(true);
-      return;
+    } else {
+      console.log("genreSelected: ", genreSelected);
+      console.log("regionSelected: ", regionSelected);
+      console.log("durationSelected: ", durationSelected);
+      console.log("movieTypeSelected: ", movieTypeSelected);
+      setIsLoading(true);
     }
-    if (regionSelected.length === 0) {
-      setPreferencesSelectError(true);
-      return;
-    }
-    if (durationSelected.length === 0) {
-      setPreferencesSelectError(true);
-      return;
-    }
-    if (movieTypeSelected.length === 0) {
-      setPreferencesSelectError(true);
-      return;
-    }
-    alert("preferences selected");
-    navigate("/recommendations");
   };
+
+  if (isLoading) {
+    return <LoadingComp />;
+  }
 
   return (
     <div className="main">
