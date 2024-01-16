@@ -12,8 +12,8 @@
 .landing-page {
   height: 100vh;
   padding: 0 1.25rem;
-  padding-top: 8.9375rem;
   &__title {
+    padding-top: 3rem;
     @include brand-header;
     font-size: 2rem;
     line-height: 2.52rem;
