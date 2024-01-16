@@ -8,9 +8,12 @@ const PreferencesPage = () => {
   const [genreSelected, setGenreSelected] = useState([]);
   const [regionSelected, setRegionSelected] = useState([]);
   const [durationSelected, setDurationSelected] = useState([]);
-
   const [movieTypeSelected, setMovieTypeSelected] = useState([]);
-  const [preferencesSelectError, setPreferencesSelectError] = useState(false);
+
+  const [genreError, setGenreError] = useState(false);
+  const [regionSelectError, setRegionSelectError] = useState(false);
+  const [durationSelectError, setDurationSelectError] = useState(false);
+  const [movieTypeSelectError, setMovieTypeSelectError] = useState(false);
 
   const genreList = [
     "Action",
@@ -57,7 +60,7 @@ const PreferencesPage = () => {
       ? genreSelected.filter((selectedGenre) => selectedGenre !== genre)
       : [...genreSelected, genre];
     setGenreSelected(updatedGenres);
-    setPreferencesSelectError(false);
+    setGenreError(false);
   };
 
   const handleRegionSelect = (event) => {
@@ -66,7 +69,7 @@ const PreferencesPage = () => {
       ? regionSelected.filter((selectedRegion) => selectedRegion !== region)
       : [...regionSelected, region];
     setRegionSelected(updatedRegions);
-    setPreferencesSelectError(false);
+    setRegionSelectError(false);
   };
 
   const handleDurationSelect = (event) => {
@@ -77,7 +80,7 @@ const PreferencesPage = () => {
         )
       : [...durationSelected, duration];
     setDurationSelected(updatedDurations);
-    setPreferencesSelectError(false);
+    setDurationSelectError(false);
   };
 
   const handleMovieTypeSelect = (event) => {
@@ -88,7 +91,7 @@ const PreferencesPage = () => {
         )
       : [...movieTypeSelected, movieType];
     setMovieTypeSelected(updatedmovieTypes);
-    setPreferencesSelectError(false);
+    setMovieTypeSelectError(false);
   };
 
   const isGenreSelected = (genre) => {
@@ -112,20 +115,27 @@ const PreferencesPage = () => {
   const handleClick = (event) => {
     event.preventDefault();
 
-    if (
-      genreSelected.length === 0 ||
-      regionSelected.length === 0 ||
-      durationSelected.length === 0 ||
-      movieTypeSelected.length === 0
-    ) {
-      setPreferencesSelectError(true);
-    } else {
-      console.log("genreSelected: ", genreSelected);
-      console.log("regionSelected: ", regionSelected);
-      console.log("durationSelected: ", durationSelected);
-      console.log("movieTypeSelected: ", movieTypeSelected);
-      setIsLoading(true);
+    if (genreSelected.length === 0) {
+      setGenreError(true);
+      return;
     }
+    if (regionSelected.length === 0) {
+      setRegionSelectError(true);
+      return;
+    }
+    if (durationSelected.length === 0) {
+      setDurationSelectError(true);
+      return;
+    }
+    if (movieTypeSelected.length === 0) {
+      setMovieTypeSelectError(true);
+      return;
+    }
+    console.log("genreSelected: ", genreSelected);
+    console.log("regionSelected: ", regionSelected);
+    console.log("durationSelected: ", durationSelected);
+    console.log("movieTypeSelected: ", movieTypeSelected);
+    setIsLoading(true);
   };
 
   if (isLoading) {
@@ -142,11 +152,7 @@ const PreferencesPage = () => {
           </h1>
           <div className="preferences">
             <div className="preference">
-              <p
-                className={`preference__title ${
-                  preferencesSelectError ? "error" : ""
-                }`}
-              >
+              <p className={`preference__title ${genreError ? "error" : ""}`}>
                 Choose a Genre
               </p>
               <ul className="preference__list">
@@ -167,7 +173,7 @@ const PreferencesPage = () => {
             <div className="preference">
               <p
                 className={`preference__title ${
-                  preferencesSelectError ? "error" : ""
+                  regionSelectError ? "error" : ""
                 }`}
               >
                 Choose a Region
@@ -190,7 +196,7 @@ const PreferencesPage = () => {
             <div className="preference">
               <p
                 className={`preference__title ${
-                  preferencesSelectError ? "error" : ""
+                  durationSelectError ? "error" : ""
                 }`}
               >
                 Choose a Duration
@@ -213,7 +219,7 @@ const PreferencesPage = () => {
             <div className="preference">
               <p
                 className={`preference__title ${
-                  preferencesSelectError ? "error" : ""
+                  movieTypeSelectError ? "error" : ""
                 }`}
               >
                 Preferred Watch

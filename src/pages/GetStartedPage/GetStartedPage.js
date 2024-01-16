@@ -61,7 +61,6 @@ const GetStartedPage = () => {
     console.log("username: ", username);
     console.log("languageSelected: ", languageSelected);
     console.log("avatarSelected: ", avatarSelected);
-    alert("Redirecting you to select preferences!");
     navigate("/preferences");
   };
 
