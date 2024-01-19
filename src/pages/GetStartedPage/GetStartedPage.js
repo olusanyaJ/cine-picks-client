@@ -74,9 +74,7 @@ const GetStartedPage = () => {
             type="text"
             name="username"
             label="Username"
-            placeholder={
-              usernameError ? "Enter a Username" : "Account Username"
-            }
+            placeholder={usernameError ? "Enter a Username" : "Username"}
             value={username}
             onChange={handleUsernameChange}
             isError={usernameError}
