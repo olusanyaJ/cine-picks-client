@@ -26,7 +26,9 @@ const GetStartedPage = () => {
   const navigate = useNavigate();
 
   const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
+    const input = event.target.value;
+    const userInput = input.charAt(0).toUpperCase() + input.slice(1);
+    setUsername(userInput);
     setUsernameError(false);
   };
 
@@ -58,9 +60,9 @@ const GetStartedPage = () => {
       setAvatarSelectError(true);
       return;
     }
-    console.log("username: ", username);
-    console.log("languageSelected: ", languageSelected);
-    console.log("avatarSelected: ", avatarSelected);
+    localStorage.setItem("username", username);
+    localStorage.setItem("selectlanguageSelectededAvatar", languageSelected);
+    localStorage.setItem("avatarSelected", avatarSelected);
     navigate("/preferences");
   };
 
