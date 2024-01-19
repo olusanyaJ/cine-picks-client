@@ -13,7 +13,9 @@ const InputSelect = ({ name, value, onChange, isError, label }) => {
         onChange={onChange}
       >
         <option label={label}></option>
-        <option value="english">English</option>
+        <option value="english" id="Trial" className="trial">
+          English
+        </option>
         <option value="french">French</option>
         <option value="spanish">Spanish</option>
         <option value="italian">Italian</option>

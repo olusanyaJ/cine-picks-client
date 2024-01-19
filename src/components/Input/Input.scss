@@ -6,10 +6,6 @@
   display: flex;
   flex-direction: column;
 
-  &__label {
-    margin-bottom: 0.25rem;
-  }
-
   &__input {
     margin-bottom: 1rem;
     border: 1px solid $form-border-color;
@@ -18,6 +14,7 @@
     padding: 0.25rem 0.5rem;
     font-size: inherit;
     height: 2.25rem;
+    color: $form-text-color;
     &::placeholder {
       color: $form-text-color;
     }

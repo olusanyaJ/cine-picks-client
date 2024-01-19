@@ -8,7 +8,7 @@
     margin-bottom: 3.6875rem;
   }
   &__inner {
-    margin-bottom: 2.75rem;
+    margin-bottom: 1.75rem;
   }
   &__title {
     margin-bottom: 1.3125rem;
@@ -21,6 +21,7 @@
   &__subtitle {
     color: $primary-color;
     line-height: 2rem;
+    margin-bottom: 0.75rem;
     &.error {
       color: $button-color;
       font-size: 1.5rem;
@@ -36,22 +37,19 @@
   &__avatar-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   &__avatar {
     width: 6.3125rem;
     height: 6.3125rem;
     border-radius: 50%;
-    margin: 0.75rem 0.25rem;
+    margin: 0.25rem;
     cursor: pointer;
-    // filter: grayscale(100%);
-    &:hover {
-      // filter: grayscale(0%);
-      border: 1px solid $preferences-color;
-    }
     &.selected {
-      // filter: grayscale(0%);
-      border: 5px solid $button-color;
+      border: 2px solid $button-color;
+    }
+    &.unselected {
+      filter: grayscale(100%);
     }
     @include mobile-max {
       width: 7.2rem;
@@ -60,10 +58,9 @@
   }
   &__link {
     display: block;
-    margin: 1rem auto;
+    margin: 0 auto;
     text-align: center;
     text-decoration-line: none;
-    border: 1px solid $preferences-color;
     padding: 0.5rem 3.3125rem;
     width: 15.6875rem;
     border-radius: 0.5rem;

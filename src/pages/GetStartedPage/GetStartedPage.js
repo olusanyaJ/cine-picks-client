@@ -114,7 +114,11 @@ const GetStartedPage = () => {
                 src={avatar}
                 alt="user avatar"
                 className={`get-started-page__avatar ${
-                  isAvatarSelected(avatar) ? "selected" : ""
+                  avatarSelected === null
+                    ? ""
+                    : isAvatarSelected(avatar)
+                    ? "selected"
+                    : "unselected"
                 }`}
                 onClick={handleAvatarSelect(avatar)}
               />
