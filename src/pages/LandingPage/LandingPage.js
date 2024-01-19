@@ -19,10 +19,12 @@ const LandingPage = () => {
             <li className="landing-page__item">the show</li>
           </ul>
         </div>
-        <p className="landing-page__subtitle">Ready to watch?</p>
-        <Link to="/get-started" className="landing-page__link">
-          Start exploring
-        </Link>
+        <div className="landing-page__explore">
+          <p className="landing-page__subtitle">Ready to watch?</p>
+          <Link to="/get-started" className="landing-page__link">
+            Start exploring
+          </Link>
+        </div>
         <img src={imgHero} alt="" className="landing-page__img" />
       </div>
     </div>
