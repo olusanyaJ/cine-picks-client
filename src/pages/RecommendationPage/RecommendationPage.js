@@ -15,7 +15,6 @@ const RecommendationPage = () => {
   }, []);
 
   if (!username) {
-    console.log("no credentials");
     return;
   }
 
