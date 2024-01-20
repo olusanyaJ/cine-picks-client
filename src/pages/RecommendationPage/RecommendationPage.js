@@ -1,11 +1,23 @@
 import Header from "../../components/Header/Header";
 import "./RecommendationPage.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Recommendations from "../../components/Recommendations/Recommendations";
+import { useEffect } from "react";
 
 const RecommendationPage = () => {
+  const navigate = useNavigate();
+
   const username = localStorage.getItem("username");
   const avatarSelected = localStorage.getItem("avatarSelected");
+
+  useEffect(() => {
+    navigate("/get-started");
+  }, []);
+
+  if (!username) {
+    console.log("no credentials");
+    return;
+  }
 
   return (
     <div className="main">
